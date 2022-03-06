@@ -1,0 +1,95 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>致琪 -> love -> you</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        } 
+    <audio id="bgmMusic" src="a/a.mp3" autoplay="autoplay" loop="loop" preload="auto" type="audio/mp3"></audio>
+    </style>
+    <link href="style/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="style/jquery.js"></script>
+    <script type="text/javascript" src="style/garden.js"></script>
+    <script type="text/javascript" src="style/functions.js"></script>
+</head>
+
+<body>
+    <div id="mainDiv">
+        /* <div id="content"> */
+            <div id="loveHeart">
+                /* <canvas id="garden"></canvas> */
+                <div id="words">
+                    <div id="messages">
+<center>
+我们的六周年
+</center>
+<br />
+<center>                        Happy Sixth Anniversary                  </center>
+    <br />  
+    <center>   
+                        <div id="elapseClock" style="display:none"></div>
+                        <a href='part2/part.html' id="accept">   亲爱的，Please click here </a>
+                        <br/>
+                        <br/>
+                        Love You
+                    </div>
+                </center>
+
+
+
+
+				     </div>
+				</div>
+			/* </div> */
+</div>
+	<div class="bg1">	
+		<div class="main">
+			<footer style="line-height:20px">
+                <div id="copyright">
+                     <a href='' target="_blank"></a> 
+                     
+                </object>
+                </div>
+		</div>
+	</div>
+</div>
+
+
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function () {
+                adjustWordsPosition();
+                startHeartAnimation();
+            }, 50);
+            
+            $("#accept").click(function(){
+                $(this).hide();
+                $("#elapseClock").show();
+                var together = new Date();
+                timeElapse(together);
+                setInterval(function () {
+                    timeElapse(together);
+                }, 50);
+            })
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+</body>
+    <audio id="bgmMusic" src="http://qzone.haoduoge.com/music/C2C3F0LSXH4D771253124A26CF9C71C939B2A.mp3" preload="auto" type="audio/mp3" autoplay loop></audio>
+</html>
